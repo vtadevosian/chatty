@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="chatty" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="QJ1-zk-5bK" userLabel="Logo Image View">
+                                <rect key="frame" x="36.5" y="182.5" width="341" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-Sf-SdU" userLabel="Logo Label">
+                                <rect key="frame" x="135" y="129.5" width="144.5" height="53"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="40"/>
+                                <color key="textColor" name="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fra-bW-gtz" userLabel="Button Stack View">
+                                <rect key="frame" x="135" y="632" width="144.5" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97T-00-v3J" userLabel="Register Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="42.5"/>
+                                        <color key="backgroundColor" name="tintColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <state key="normal" title="register">
+                                            <color key="titleColor" name="backgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-Ov-FGy" userLabel="Login Button">
+                                        <rect key="frame" x="0.0" y="52.5" width="144.5" height="42.5"/>
+                                        <color key="backgroundColor" name="tintColor"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <state key="normal" title="log in">
+                                            <color key="titleColor" name="backgroundColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="backgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="width" secondItem="GA2-Sf-SdU" secondAttribute="width" id="5hh-02-Fly"/>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="7mi-gP-e4S"/>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GdV-6P-3r4"/>
+                            <constraint firstItem="QJ1-zk-5bK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GyA-Bk-ibP"/>
+                            <constraint firstItem="QJ1-zk-5bK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="HNH-WF-fVr"/>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="height" secondItem="GA2-Sf-SdU" secondAttribute="height" multiplier="1.8" id="Xao-aR-59d"/>
+                            <constraint firstItem="QJ1-zk-5bK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="Xz5-2V-U3G"/>
+                            <constraint firstItem="GA2-Sf-SdU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hZf-lm-pKc"/>
+                            <constraint firstItem="QJ1-zk-5bK" firstAttribute="top" secondItem="GA2-Sf-SdU" secondAttribute="bottom" id="iig-0f-nPa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="logButtons" destination="yzc-Ov-FGy" collectionClass="NSMutableArray" id="Mhe-xF-RFK"/>
+                        <outletCollection property="logButtons" destination="97T-00-v3J" collectionClass="NSMutableArray" id="3Fg-Nk-nsp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo.svg" width="341" height="341"/>
+        <namedColor name="backgroundColor">
+            <color red="0.70899185629999995" green="0.75168391859999995" blue="0.87976010559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tintColor">
+            <color red="0.080557467029999996" green="0.078726615520000001" blue="0.19590111299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
