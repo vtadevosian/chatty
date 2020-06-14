@@ -22,17 +22,8 @@ class WelcomeViewController: UIViewController {
 
     func setUpButtonsUI() {
         logButtons.forEach { button in
-            // Rounding corners
-            button.layer.cornerRadius = button.frame.size.height / 4
-            button.layer.masksToBounds = false
-            button.layer.borderWidth = 1.0
-            button.layer.borderColor = UIColor.clear.cgColor
-            
-            // Adding shadow
-            button.layer.shadowColor = UIColor(named: "shadowColor")?.cgColor
-            button.layer.shadowOpacity = 0.5
-            button.layer.shadowRadius = 12
-            button.layer.shadowOffset = CGSize(width: 4, height: 10)
+            button.roundCorners()
+            button.addShadow(color: UIColor(named: "shadowColor")?.cgColor)
         }
     }
 }
