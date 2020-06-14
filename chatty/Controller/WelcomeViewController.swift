@@ -17,6 +17,7 @@ class WelcomeViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         setUpButtonsUI()
     }
 

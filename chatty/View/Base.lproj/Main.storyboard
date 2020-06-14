@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OfN-WJ-3ea">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-Sf-SdU" userLabel="Logo Label">
                                 <rect key="frame" x="135" y="129.5" width="144.5" height="53"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="40"/>
-                                <color key="textColor" name="tintColor"/>
+                                <color key="textColor" name="tintColor1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fra-bW-gtz" userLabel="Button Stack View">
@@ -30,24 +30,24 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97T-00-v3J" userLabel="Register Button">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="42.5"/>
-                                        <color key="backgroundColor" name="tintColor"/>
+                                        <color key="backgroundColor" name="tintColor1"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                         <state key="normal" title="register">
-                                            <color key="titleColor" name="backgroundColor"/>
+                                            <color key="titleColor" name="backgroundColor1"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-Ov-FGy" userLabel="Login Button">
                                         <rect key="frame" x="0.0" y="52.5" width="144.5" height="42.5"/>
-                                        <color key="backgroundColor" name="tintColor"/>
+                                        <color key="backgroundColor" name="tintColor1"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                         <state key="normal" title="log in">
-                                            <color key="titleColor" name="backgroundColor"/>
+                                            <color key="titleColor" name="backgroundColor1"/>
                                         </state>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor1"/>
                         <constraints>
                             <constraint firstItem="fra-bW-gtz" firstAttribute="width" secondItem="GA2-Sf-SdU" secondAttribute="width" id="5hh-02-Fly"/>
                             <constraint firstItem="fra-bW-gtz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="7mi-gP-e4S"/>
@@ -70,29 +70,102 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Log View Controller-->
         <scene sceneID="hBy-YR-GL9">
             <objects>
-                <viewController id="OfN-WJ-3ea" sceneMemberID="viewController">
+                <viewController id="OfN-WJ-3ea" customClass="LogViewController" customModule="chatty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Khz-Cs-oCE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="spi-lj-yCs">
+                                <rect key="frame" x="83" y="245" width="248" height="280"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Ne-kha" userLabel="Logo Image View">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9zM-Uc-mDp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmx-Nf-ILO" userLabel="Email Text Field">
+                                        <rect key="frame" x="0.0" y="110" width="248" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="tintColor2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Pi1-fg-fId"/>
+                                        </constraints>
+                                        <color key="textColor" name="tintColor2"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ut-NH-4Yy" userLabel="Password Text Field">
+                                        <rect key="frame" x="0.0" y="155" width="248" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="tintColor2"/>
+                                        <color key="textColor" name="tintColor2"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Za-84-Ngj" userLabel="Repeat Password Text Field">
+                                        <rect key="frame" x="0.0" y="200" width="248" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="tintColor2"/>
+                                        <color key="textColor" name="tintColor2"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kF8-zu-cck" userLabel="Log Button">
+                                        <rect key="frame" x="0.0" y="245" width="248" height="35"/>
+                                        <color key="backgroundColor" name="tintColor2"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <state key="normal" title="register">
+                                            <color key="titleColor" name="tintColor3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6ut-NH-4Yy" firstAttribute="height" secondItem="gmx-Nf-ILO" secondAttribute="height" id="XkS-sN-7Up"/>
+                                    <constraint firstItem="kF8-zu-cck" firstAttribute="height" secondItem="gmx-Nf-ILO" secondAttribute="height" id="iQ5-4s-2fT"/>
+                                    <constraint firstItem="7Za-84-Ngj" firstAttribute="height" secondItem="gmx-Nf-ILO" secondAttribute="height" id="zmz-hC-FLa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39736432649999998" green="0.42344956150000002" blue="0.50170526650000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="spi-lj-yCs" firstAttribute="width" secondItem="Khz-Cs-oCE" secondAttribute="width" multiplier="0.6" id="DJp-3t-49k"/>
+                            <constraint firstItem="spi-lj-yCs" firstAttribute="centerX" secondItem="tfK-XI-8FH" secondAttribute="centerX" id="NCA-ZH-tRM"/>
+                            <constraint firstItem="spi-lj-yCs" firstAttribute="centerY" secondItem="tfK-XI-8FH" secondAttribute="centerY" multiplier="0.85" id="xC8-Py-wFE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tfK-XI-8FH"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="gmx-Nf-ILO" id="I3d-Hz-57E"/>
+                        <outlet property="logButton" destination="kF8-zu-cck" id="Wzv-Z5-rYC"/>
+                        <outlet property="passwordTextField" destination="6ut-NH-4Yy" id="2vT-fq-wri"/>
+                        <outlet property="repeatPasswordTextField" destination="7Za-84-Ngj" id="ytB-Ky-DB7"/>
+                        <outletCollection property="logTextFields" destination="gmx-Nf-ILO" collectionClass="NSMutableArray" id="WJn-wI-QYK"/>
+                        <outletCollection property="logTextFields" destination="6ut-NH-4Yy" collectionClass="NSMutableArray" id="ajq-96-4zm"/>
+                        <outletCollection property="logTextFields" destination="7Za-84-Ngj" collectionClass="NSMutableArray" id="Geg-2U-KbK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vat-ay-SWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="997" y="138"/>
+            <point key="canvasLocation" x="995.65217391304361" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo.svg" width="341" height="341"/>
-        <namedColor name="backgroundColor">
+        <namedColor name="backgroundColor1">
             <color red="0.70899185629999995" green="0.75168391859999995" blue="0.87976010559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="tintColor">
+        <namedColor name="tintColor1">
             <color red="0.080557467029999996" green="0.078726615520000001" blue="0.19590111299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tintColor2">
+            <color red="0.10195594049999999" green="0.1086489034" blue="0.1287277919" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="tintColor3">
+            <color red="0.70899185629999995" green="0.75168391859999995" blue="0.87976010559999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

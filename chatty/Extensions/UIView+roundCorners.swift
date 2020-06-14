@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton {
+extension UIView {
     func roundCorners(cornerRadius: CGFloat? = nil, borderWidth: CGFloat = 1.0, borderColor: CGColor? = nil) {
         self.layer.cornerRadius = cornerRadius ?? self.frame.size.height / 4
         self.layer.masksToBounds = false

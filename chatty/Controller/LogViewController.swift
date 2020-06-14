@@ -9,22 +9,47 @@
 import UIKit
 
 class LogViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    enum AuthType {
+        case login, register
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var repeatPasswordTextField: UITextField!
+    
+    @IBOutlet var logTextFields: [UITextField]!
+    
+    @IBOutlet weak var logButton: UIButton!
+    
+    var authType: AuthType? = .register
+    
+    private var isLoginType: Bool {
+        return authType == .login
     }
-    */
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        repeatPasswordTextField.isHidden = isLoginType
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.view.backgroundColor = isLoginType ? .bgColor2 : .bgColor3
+        
+        logTextFields.forEach { textField in
+            textField.tintColor = isLoginType ? .tintColor2 : .tintColor4
+            textField.textColor = isLoginType ? .tintColor2 : .tintColor4
+        }
+        
+        logButton.setTitleColor(isLoginType ? .tintColor3 : .tintColor5, for: .normal)
+        logButton.backgroundColor = isLoginType ? .tintColor2 : .tintColor4
+        logButton.titleLabel?.textAlignment = .center
+        logButton.titleLabel?.text = isLoginType ? "login" : "register"
+        
+        
+        logButton.roundCorners()
+        logButton.addShadow(color: UIColor(named:  "shadowColor")?.cgColor)
+    }
 
 }

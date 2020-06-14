@@ -14,8 +14,9 @@
 		D49DC0F62496A7030039316E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49DC0F42496A7030039316E /* LaunchScreen.storyboard */; };
 		D49DC1002496AEBA0039316E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC0FF2496AEBA0039316E /* WelcomeViewController.swift */; };
 		D49DC1022496B46E0039316E /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1012496B46E0039316E /* LogViewController.swift */; };
-		D49DC1062496B51E0039316E /* UIButton+addShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1052496B51E0039316E /* UIButton+addShadow.swift */; };
-		D49DC1082496B5300039316E /* UIButton+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1072496B5300039316E /* UIButton+roundCorners.swift */; };
+		D49DC1062496B51E0039316E /* UIView+addShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1052496B51E0039316E /* UIView+addShadow.swift */; };
+		D49DC1082496B5300039316E /* UIView+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1072496B5300039316E /* UIView+roundCorners.swift */; };
+		D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC10A2496D4540039316E /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		D49DC0F72496A7030039316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49DC0FF2496AEBA0039316E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D49DC1012496B46E0039316E /* LogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
-		D49DC1052496B51E0039316E /* UIButton+addShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+addShadow.swift"; sourceTree = "<group>"; };
-		D49DC1072496B5300039316E /* UIButton+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+roundCorners.swift"; sourceTree = "<group>"; };
+		D49DC1052496B51E0039316E /* UIView+addShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addShadow.swift"; sourceTree = "<group>"; };
+		D49DC1072496B5300039316E /* UIView+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+roundCorners.swift"; sourceTree = "<group>"; };
+		D49DC10A2496D4540039316E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,9 @@
 		D49DC1092496B7720039316E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D49DC1052496B51E0039316E /* UIButton+addShadow.swift */,
-				D49DC1072496B5300039316E /* UIButton+roundCorners.swift */,
+				D49DC1052496B51E0039316E /* UIView+addShadow.swift */,
+				D49DC1072496B5300039316E /* UIView+roundCorners.swift */,
+				D49DC10A2496D4540039316E /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,11 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */,
 				D49DC1002496AEBA0039316E /* WelcomeViewController.swift in Sources */,
-				D49DC1082496B5300039316E /* UIButton+roundCorners.swift in Sources */,
+				D49DC1082496B5300039316E /* UIView+roundCorners.swift in Sources */,
 				D49DC0EA2496A7010039316E /* AppDelegate.swift in Sources */,
 				D49DC0EC2496A7010039316E /* SceneDelegate.swift in Sources */,
-				D49DC1062496B51E0039316E /* UIButton+addShadow.swift in Sources */,
+				D49DC1062496B51E0039316E /* UIView+addShadow.swift in Sources */,
 				D49DC1022496B46E0039316E /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
