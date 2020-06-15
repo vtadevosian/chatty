@@ -17,6 +17,7 @@
 		D49DC1062496B51E0039316E /* UIView+addShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1052496B51E0039316E /* UIView+addShadow.swift */; };
 		D49DC1082496B5300039316E /* UIView+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1072496B5300039316E /* UIView+roundCorners.swift */; };
 		D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC10A2496D4540039316E /* UIColor+Extension.swift */; };
+		D49DC10D2497C8740039316E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC10C2497C8740039316E /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D49DC1052496B51E0039316E /* UIView+addShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addShadow.swift"; sourceTree = "<group>"; };
 		D49DC1072496B5300039316E /* UIView+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+roundCorners.swift"; sourceTree = "<group>"; };
 		D49DC10A2496D4540039316E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		D49DC10C2497C8740039316E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				D49DC0FF2496AEBA0039316E /* WelcomeViewController.swift */,
 				D49DC1012496B46E0039316E /* LogViewController.swift */,
+				D49DC10C2497C8740039316E /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */,
 				D49DC1002496AEBA0039316E /* WelcomeViewController.swift in Sources */,
+				D49DC10D2497C8740039316E /* ChatViewController.swift in Sources */,
 				D49DC1082496B5300039316E /* UIView+roundCorners.swift in Sources */,
 				D49DC0EA2496A7010039316E /* AppDelegate.swift in Sources */,
 				D49DC0EC2496A7010039316E /* SceneDelegate.swift in Sources */,

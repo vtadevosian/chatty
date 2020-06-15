@@ -49,7 +49,7 @@ class LogViewController: UIViewController {
         
         
         logButton.roundCorners()
-        logButton.addShadow(color: UIColor(named:  "shadowColor")?.cgColor)
+        logButton.addShadow(color: UIColor.shadowColor.cgColor)
     }
 
 }

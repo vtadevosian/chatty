@@ -21,6 +21,10 @@ extension UIColor {
         return UIColor(named: "backgroundColor3") ?? .black
     }
     
+    static var bgColor4: UIColor {
+        return UIColor(named: "backgroundColor4") ?? .black
+    }
+    
     static var tintColor1: UIColor {
         return UIColor(named: "tintColor1") ?? .black
     }
@@ -39,6 +43,10 @@ extension UIColor {
     
     static var tintColor5: UIColor {
         return UIColor(named: "tintColor5") ?? .black
+    }
+    
+    static var shadowColor: UIColor {
+        return UIColor(named: "shadowColor") ?? .black
     }
 }
 
