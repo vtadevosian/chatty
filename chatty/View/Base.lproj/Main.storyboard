@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uTy-t0-amz">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5mm-Lc-pmK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="QJ1-zk-5bK" userLabel="Logo Image View">
-                                <rect key="frame" x="36.5" y="182.5" width="341" height="269"/>
+                                <rect key="frame" x="36.5" y="198" width="341" height="269"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chatty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GA2-Sf-SdU" userLabel="Logo Label">
-                                <rect key="frame" x="135" y="129.5" width="144.5" height="53"/>
+                                <rect key="frame" x="135" y="145" width="144.5" height="53"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="40"/>
                                 <color key="textColor" name="tintColor1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fra-bW-gtz" userLabel="Button Stack View">
-                                <rect key="frame" x="135" y="632" width="144.5" height="95"/>
+                                <rect key="frame" x="124" y="654.5" width="166" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97T-00-v3J" userLabel="Register Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="53"/>
                                         <color key="backgroundColor" name="tintColor1"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                         <state key="normal" title="register">
@@ -37,7 +37,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-Ov-FGy" userLabel="Login Button">
-                                        <rect key="frame" x="0.0" y="52.5" width="144.5" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="63" width="166" height="53"/>
                                         <color key="backgroundColor" name="tintColor1"/>
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                         <state key="normal" title="log in">
@@ -49,26 +49,29 @@
                         </subviews>
                         <color key="backgroundColor" name="backgroundColor1"/>
                         <constraints>
-                            <constraint firstItem="fra-bW-gtz" firstAttribute="width" secondItem="GA2-Sf-SdU" secondAttribute="width" id="5hh-02-Fly"/>
                             <constraint firstItem="fra-bW-gtz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="7mi-gP-e4S"/>
                             <constraint firstItem="fra-bW-gtz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GdV-6P-3r4"/>
                             <constraint firstItem="QJ1-zk-5bK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GyA-Bk-ibP"/>
                             <constraint firstItem="QJ1-zk-5bK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="HNH-WF-fVr"/>
-                            <constraint firstItem="fra-bW-gtz" firstAttribute="height" secondItem="GA2-Sf-SdU" secondAttribute="height" multiplier="1.8" id="Xao-aR-59d"/>
                             <constraint firstItem="QJ1-zk-5bK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.7" id="Xz5-2V-U3G"/>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.15" id="aFx-lb-U0P"/>
+                            <constraint firstItem="fra-bW-gtz" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.4" id="gPV-9l-Hi4"/>
                             <constraint firstItem="GA2-Sf-SdU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hZf-lm-pKc"/>
                             <constraint firstItem="QJ1-zk-5bK" firstAttribute="top" secondItem="GA2-Sf-SdU" secondAttribute="bottom" id="iig-0f-nPa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aTJ-wn-4yu"/>
                     <connections>
+                        <outlet property="logoLabel" destination="GA2-Sf-SdU" id="JEW-PT-33D"/>
                         <outletCollection property="logButtons" destination="yzc-Ov-FGy" collectionClass="NSMutableArray" id="Mhe-xF-RFK"/>
                         <outletCollection property="logButtons" destination="97T-00-v3J" collectionClass="NSMutableArray" id="3Fg-Nk-nsp"/>
+                        <segue destination="OfN-WJ-3ea" kind="show" identifier="LogSegue" id="HU5-UJ-lk0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
         <!--Log View Controller-->
         <scene sceneID="hBy-YR-GL9">
@@ -79,7 +82,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="spi-lj-yCs">
-                                <rect key="frame" x="83" y="245" width="248" height="280"/>
+                                <rect key="frame" x="83" y="264" width="248" height="280"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.svg" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Ne-kha" userLabel="Logo Image View">
                                         <rect key="frame" x="0.0" y="0.0" width="248" height="100"/>
@@ -138,6 +141,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tfK-XI-8FH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="74J-p6-yDv"/>
                     <connections>
                         <outlet property="emailTextField" destination="gmx-Nf-ILO" id="I3d-Hz-57E"/>
                         <outlet property="logButton" destination="kF8-zu-cck" id="Wzv-Z5-rYC"/>
@@ -146,11 +150,12 @@
                         <outletCollection property="logTextFields" destination="gmx-Nf-ILO" collectionClass="NSMutableArray" id="WJn-wI-QYK"/>
                         <outletCollection property="logTextFields" destination="6ut-NH-4Yy" collectionClass="NSMutableArray" id="ajq-96-4zm"/>
                         <outletCollection property="logTextFields" destination="7Za-84-Ngj" collectionClass="NSMutableArray" id="Geg-2U-KbK"/>
+                        <segue destination="uTy-t0-amz" kind="show" identifier="ChatSegue" id="rWF-Mm-aMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vat-ay-SWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995.65217391304361" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1905.7971014492755" y="137.94642857142856"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="8f3-bQ-fAY">
@@ -161,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpa-PY-grB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="743"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="699"/>
                                 <color key="backgroundColor" red="0.99209862457961784" green="0.98602720946567468" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHd-yT-wgJ">
@@ -222,6 +227,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NaB-oq-snd"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y20-gV-ELq"/>
                     <connections>
                         <outlet property="newMessageTextField" destination="dFK-hQ-BM9" id="vcX-6B-J8U"/>
                         <outlet property="sendButton" destination="Xdc-fF-8cl" id="3nf-MA-5Dk"/>
@@ -230,7 +236,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AER-PZ-Kb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.8695652173915" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2871.0144927536235" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2Hg-2z-5U2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5mm-Lc-pmK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="MNF-nf-jvC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8vl-jR-Rbh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6a-z9-oqZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
