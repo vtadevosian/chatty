@@ -23,18 +23,33 @@ class LogViewController: UIViewController {
     @IBOutlet weak var logButton: UIButton!
     
     var authType: AuthType? = .register
-    
+    var auth = Auth.auth()
     private var isLoginType: Bool {
         return authType == .login
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        layout()
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        layout()
+    }
+    
+    @IBAction func logButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text else { return }
+        
+        if isLoginType {
+            logIn(email: email, password: password)
+        } else {
+            register(email: email, password: password)
+        }
+    }
+    
+    private func layout() {
         repeatPasswordTextField.isHidden = isLoginType
         
         let bgColor: UIColor = isLoginType ? .bgColor2 : .bgColor3
@@ -52,25 +67,14 @@ class LogViewController: UIViewController {
         logButton.setTitleColor(buttonColor, for: .normal)
         logButton.backgroundColor = tintColor
         logButton.titleLabel?.textAlignment = .center
-        logButton.titleLabel?.text = isLoginType ? "login" : "register"
+        logButton.setTitle(isLoginType ? "login" : "register", for: .normal)
 
         logButton.roundCorners()
         logButton.addShadow(color: UIColor.shadowColor.cgColor)
     }
     
-    @IBAction func logButtonTapped(_ sender: Any) {
-        guard let email = emailTextField.text,
-            let password = passwordTextField.text else { return }
-        
-        if isLoginType {
-            logIn(email: email, password: password)
-        } else {
-            register(email: email, password: password)
-        }
-    }
-    
     private func register(email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+        auth.createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 // Handle auth error
                 
@@ -82,7 +86,7 @@ class LogViewController: UIViewController {
     }
 
     private func logIn(email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+        auth.signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 // Handle auth error
                 print(error.localizedDescription)
