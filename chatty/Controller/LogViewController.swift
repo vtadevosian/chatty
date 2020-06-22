@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogViewController: UIViewController {
     enum AuthType {
@@ -29,27 +30,69 @@ class LogViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        repeatPasswordTextField.isHidden = isLoginType
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        self.view.backgroundColor = isLoginType ? .bgColor2 : .bgColor3
+        repeatPasswordTextField.isHidden = isLoginType
         
+        let bgColor: UIColor = isLoginType ? .bgColor2 : .bgColor3
+        let tintColor: UIColor = isLoginType ? .tintColor2 : .tintColor4
+        let buttonColor: UIColor = isLoginType ? .tintColor3 : .tintColor5
+        
+        view.backgroundColor = bgColor
+        navigationController?.navigationBar.tintColor = tintColor
+
         logTextFields.forEach { textField in
-            textField.tintColor = isLoginType ? .tintColor2 : .tintColor4
-            textField.textColor = isLoginType ? .tintColor2 : .tintColor4
+            textField.tintColor = tintColor
+            textField.textColor = tintColor
         }
-        
-        logButton.setTitleColor(isLoginType ? .tintColor3 : .tintColor5, for: .normal)
-        logButton.backgroundColor = isLoginType ? .tintColor2 : .tintColor4
+
+        logButton.setTitleColor(buttonColor, for: .normal)
+        logButton.backgroundColor = tintColor
         logButton.titleLabel?.textAlignment = .center
         logButton.titleLabel?.text = isLoginType ? "login" : "register"
-        
-        
+
         logButton.roundCorners()
         logButton.addShadow(color: UIColor.shadowColor.cgColor)
     }
+    
+    @IBAction func logButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text,
+            let password = passwordTextField.text else { return }
+        
+        if isLoginType {
+            logIn(email: email, password: password)
+        } else {
+            register(email: email, password: password)
+        }
+    }
+    
+    private func register(email: String, password: String) {
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                // Handle auth error
+                
+                print(error.localizedDescription)
+            } else {
+                self.navigateToChatVC()
+            }
+        }
+    }
 
+    private func logIn(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                // Handle auth error
+                print(error.localizedDescription)
+            } else {
+                self.navigateToChatVC()
+            }
+        }
+    }
+    
+    private func navigateToChatVC() {
+        self.performSegue(withIdentifier: "ChatSegue", sender: self)
+    }
 }

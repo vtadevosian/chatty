@@ -35,6 +35,9 @@
                                         <state key="normal" title="register">
                                             <color key="titleColor" name="backgroundColor1"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7E-uj-9Sn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-Ov-FGy" userLabel="Login Button">
                                         <rect key="frame" x="0.0" y="63" width="166" height="53"/>
@@ -43,6 +46,9 @@
                                         <state key="normal" title="log in">
                                             <color key="titleColor" name="backgroundColor1"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gzK-kl-Sby"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,7 +82,7 @@
         <!--Log View Controller-->
         <scene sceneID="hBy-YR-GL9">
             <objects>
-                <viewController id="OfN-WJ-3ea" customClass="LogViewController" customModule="chatty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogVC" id="OfN-WJ-3ea" customClass="LogViewController" customModule="chatty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Khz-Cs-oCE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +96,7 @@
                                             <constraint firstAttribute="height" constant="100" id="9zM-Uc-mDp"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmx-Nf-ILO" userLabel="Email Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmx-Nf-ILO" userLabel="Email Text Field">
                                         <rect key="frame" x="0.0" y="110" width="248" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="tintColor2"/>
@@ -109,7 +115,7 @@
                                         <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Za-84-Ngj" userLabel="Repeat Password Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="repeat password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Za-84-Ngj" userLabel="Repeat Password Text Field">
                                         <rect key="frame" x="0.0" y="200" width="248" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" name="tintColor2"/>
@@ -124,6 +130,9 @@
                                         <state key="normal" title="register">
                                             <color key="titleColor" name="tintColor3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logButtonTapped:" destination="OfN-WJ-3ea" eventType="touchUpInside" id="RxK-15-3P8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -169,7 +178,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="699"/>
                                 <color key="backgroundColor" red="0.99209862457961784" green="0.98602720946567468" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="pHd-yT-wgJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="pHd-yT-wgJ">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pHd-yT-wgJ" id="NYC-lS-rR7">
@@ -265,7 +274,7 @@
             <color red="0.70899999141693115" green="0.75199997425079346" blue="0.87999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="backgroundColor4">
-            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tintColor1">
             <color red="0.081000000238418579" green="0.079000003635883331" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
