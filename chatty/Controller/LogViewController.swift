@@ -45,7 +45,18 @@ class LogViewController: UIViewController {
         if isLoginType {
             logIn(email: email, password: password)
         } else {
-            register(email: email, password: password)
+            guard let repeatedPassword = repeatPasswordTextField.text Zelse {
+                // Handle the error
+                print("Password verification is missing.")
+                return
+            }
+            
+            if password == repeatedPassword {
+                register(email: email, password: password)
+            } else {
+                // Handle the error
+                print("Passwords mismatch.")
+            }
         }
     }
     
