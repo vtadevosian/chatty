@@ -21,6 +21,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+        navigationItem.title = K.appName + "🖊"
         tableView.dataSource = self
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil),
                            forCellReuseIdentifier: K.cellIdentifier)
@@ -49,7 +50,9 @@ class ChatViewController: UIViewController {
                     // Handle the error
                     print("Data saving error: \(error)")
                 } else {
-                    print("Success")
+                    DispatchQueue.main.async {
+                        self.newMessageTextField.text = ""
+                    }
                 }
         }
     }
@@ -72,6 +75,8 @@ class ChatViewController: UIViewController {
                         self.messages.append(newMessage)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
+                            let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                            self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                         }
                     }
                 }
@@ -88,8 +93,16 @@ extension ChatViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label?.text = messages[indexPath.row].body
+        
+        let isSender = message.sender == Auth.auth().currentUser?.email
+        print(isSender)
+        cell.recepientAvatarImageView.isHidden = isSender
+        cell.senderAvatarImageView.isHidden = !isSender
+        cell.messageBubble.backgroundColor = isSender ? .tintColor2 : .tintColor4
+        cell.label?.text = message.body
         return cell
     }
 }

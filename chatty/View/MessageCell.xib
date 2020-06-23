@@ -20,11 +20,19 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gqp-xk-eYj">
                         <rect key="frame" x="10" y="10" width="326" height="55"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DJV-jb-sht">
+                                <rect key="frame" x="0.0" y="15.5" width="40" height="39"/>
+                                <color key="tintColor" name="tintColor4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MqC-ih-ieX"/>
+                                    <constraint firstAttribute="width" constant="40" id="wZQ-GO-S7T"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9c-8V-52N">
-                                <rect key="frame" x="0.0" y="5" width="266" height="50"/>
+                                <rect key="frame" x="60" y="5" width="206" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eny-Cr-UVy">
-                                        <rect key="frame" x="10" y="10" width="246" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="186" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="backgroundColor1"/>
                                         <nil key="highlightedColor"/>
@@ -44,8 +52,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EoQ-bg-3xS"/>
                                     <constraint firstAttribute="width" constant="40" id="eos-2u-PIe"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hCk-pj-O30"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="i3j-4q-5bh"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -62,9 +68,10 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="avatarImageView" destination="zS6-RD-ftH" id="NaO-Lo-ILK"/>
                 <outlet property="label" destination="Eny-Cr-UVy" id="eQp-nz-iLX"/>
                 <outlet property="messageBubble" destination="m9c-8V-52N" id="72r-dp-vud"/>
+                <outlet property="recepientAvatarImageView" destination="DJV-jb-sht" id="uOj-Wk-zOc"/>
+                <outlet property="senderAvatarImageView" destination="zS6-RD-ftH" id="NaO-Lo-ILK"/>
             </connections>
             <point key="canvasLocation" x="155.07246376811597" y="94.084821428571431"/>
         </tableViewCell>
@@ -76,6 +83,9 @@
         </namedColor>
         <namedColor name="tintColor1">
             <color red="0.081000000238418579" green="0.079000003635883331" blue="0.19599999487400055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tintColor4">
+            <color red="0.12399999797344208" green="0.14399999380111694" blue="0.16099999845027924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
