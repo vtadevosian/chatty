@@ -177,16 +177,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cpa-PY-grB">
                                 <rect key="frame" x="0.0" y="88" width="414" height="699"/>
                                 <color key="backgroundColor" red="0.99209862457961784" green="0.98602720946567468" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" id="pHd-yT-wgJ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pHd-yT-wgJ" id="NYC-lS-rR7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-HB-OAP" userLabel="New Message View">
                                 <rect key="frame" x="0.0" y="787" width="414" height="75"/>
@@ -246,7 +236,7 @@
                     <connections>
                         <outlet property="newMessageTextField" destination="dFK-hQ-BM9" id="vcX-6B-J8U"/>
                         <outlet property="sendButton" destination="Xdc-fF-8cl" id="3nf-MA-5Dk"/>
-                        <outlet property="tableView" destination="cpa-PY-grB" id="E2B-dP-Rtb"/>
+                        <outlet property="tableView" destination="cpa-PY-grB" id="uNU-7Y-kKl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AER-PZ-Kb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

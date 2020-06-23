@@ -21,6 +21,9 @@
 		D49DC1082496B5300039316E /* UIView+roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC1072496B5300039316E /* UIView+roundCorners.swift */; };
 		D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC10A2496D4540039316E /* UIColor+Extension.swift */; };
 		D49DC10D2497C8740039316E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC10C2497C8740039316E /* ChatViewController.swift */; };
+		D4E1172E24A2988300E892B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1172D24A2988300E892B2 /* Message.swift */; };
+		D4E1173124A29B0200E892B2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1172F24A29B0200E892B2 /* MessageCell.swift */; };
+		D4E1173224A29B0200E892B2 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4E1173024A29B0200E892B2 /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		D49DC1072496B5300039316E /* UIView+roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+roundCorners.swift"; sourceTree = "<group>"; };
 		D49DC10A2496D4540039316E /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D49DC10C2497C8740039316E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		D4E1172D24A2988300E892B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D4E1172F24A29B0200E892B2 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		D4E1173024A29B0200E892B2 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 				D49DC0EB2496A7010039316E /* SceneDelegate.swift */,
 				D4669AB824A1499F0007E5D3 /* Constants.swift */,
 				D49DC1092496B7720039316E /* Extensions */,
+				D4E1172C24A2986F00E892B2 /* Model */,
 				D49DC0FD2496A70F0039316E /* View */,
 				D49DC0FE2496A7160039316E /* Controller */,
 				D49DC0F22496A7030039316E /* Assets.xcassets */,
@@ -95,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				D49DC0EF2496A7010039316E /* Main.storyboard */,
+				D4E1172F24A29B0200E892B2 /* MessageCell.swift */,
+				D4E1173024A29B0200E892B2 /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -117,6 +126,14 @@
 				D49DC10A2496D4540039316E /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D4E1172C24A2986F00E892B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1172D24A2988300E892B2 /* Message.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DFB30207A1C793B1CC420141 /* Frameworks */ = {
@@ -196,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E1173224A29B0200E892B2 /* MessageCell.xib in Resources */,
 				D49DC0F62496A7030039316E /* LaunchScreen.storyboard in Resources */,
 				D4669AB724A104BA0007E5D3 /* GoogleService-Info.plist in Resources */,
 				D49DC0F32496A7030039316E /* Assets.xcassets in Resources */,
@@ -252,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E1173124A29B0200E892B2 /* MessageCell.swift in Sources */,
 				D49DC10B2496D4540039316E /* UIColor+Extension.swift in Sources */,
 				D49DC1002496AEBA0039316E /* WelcomeViewController.swift in Sources */,
 				D49DC10D2497C8740039316E /* ChatViewController.swift in Sources */,
@@ -259,6 +278,7 @@
 				D49DC0EA2496A7010039316E /* AppDelegate.swift in Sources */,
 				D49DC0EC2496A7010039316E /* SceneDelegate.swift in Sources */,
 				D49DC1062496B51E0039316E /* UIView+addShadow.swift in Sources */,
+				D4E1172E24A2988300E892B2 /* Message.swift in Sources */,
 				D49DC1022496B46E0039316E /* LogViewController.swift in Sources */,
 				D4669AB924A1499F0007E5D3 /* Constants.swift in Sources */,
 			);
