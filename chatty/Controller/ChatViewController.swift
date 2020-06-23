@@ -43,7 +43,8 @@ class ChatViewController: UIViewController {
         
         db.collection(K.FStore.collectionName).addDocument(data: [
             K.FStore.senderField: messageSender,
-            K.FStore.bodyField: messageBody]) { error in
+            K.FStore.bodyField: messageBody,
+            K.FStore.dateField: Date().timeIntervalSince1970]) { error in
                 if let error = error {
                     // Handle the error
                     print("Data saving error: \(error)")
@@ -54,8 +55,11 @@ class ChatViewController: UIViewController {
     }
     
     private func loadMessages() {
-        messages = []
-        db.collection(K.FStore.collectionName).getDocuments { (querySnapshot, error) in
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error) in
+                
+            self.messages = []
             if let error = error {
                 print("Data retrieval error: \(error)")
             } else {
@@ -85,7 +89,7 @@ extension ChatViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.textLabel?.text = messages[indexPath.row].body
+        cell.label?.text = messages[indexPath.row].body
         return cell
     }
 }
