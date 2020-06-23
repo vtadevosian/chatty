@@ -9,44 +9,46 @@
 import UIKit
 
 extension UIColor {
+    typealias brandColors = K.BrandColors
+    
     static var bgColor1: UIColor {
-        return UIColor(named: "backgroundColor1") ?? .black
+        return UIColor(named: brandColors.bgColor1) ?? .black
     }
     
     static var bgColor2: UIColor {
-        return UIColor(named: "backgroundColor2") ?? .black
+        return UIColor(named: brandColors.bgColor2) ?? .black
     }
 
     static var bgColor3: UIColor {
-        return UIColor(named: "backgroundColor3") ?? .black
+        return UIColor(named: brandColors.bgColor3) ?? .black
     }
     
     static var bgColor4: UIColor {
-        return UIColor(named: "backgroundColor4") ?? .black
+        return UIColor(named: brandColors.bgColor4) ?? .black
     }
     
     static var tintColor1: UIColor {
-        return UIColor(named: "tintColor1") ?? .black
+        return UIColor(named: brandColors.tintColor1) ?? .black
     }
     
     static var tintColor2: UIColor {
-        return UIColor(named: "tintColor2") ?? .black
+        return UIColor(named: brandColors.tintColor2) ?? .black
     }
     
     static var tintColor3: UIColor {
-        return UIColor(named: "tintColor3") ?? .black
+        return UIColor(named: brandColors.tintColor3) ?? .black
     }
     
     static var tintColor4: UIColor {
-        return UIColor(named: "tintColor4") ?? .black
+        return UIColor(named: brandColors.tintColor4) ?? .black
     }
     
     static var tintColor5: UIColor {
-        return UIColor(named: "tintColor5") ?? .black
+        return UIColor(named: brandColors.tintColor5) ?? .black
     }
     
     static var shadowColor: UIColor {
-        return UIColor(named: "shadowColor") ?? .black
+        return UIColor(named: brandColors.shadowColor) ?? .black
     }
 }
 

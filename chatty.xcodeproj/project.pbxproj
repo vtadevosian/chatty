@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BB353E7D87D8E5F59BC5FFA7 /* Pods_chatty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CBE548C68A2B4B6E2603CBE /* Pods_chatty.framework */; };
 		D4669AB724A104BA0007E5D3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4669AB624A104BA0007E5D3 /* GoogleService-Info.plist */; };
+		D4669AB924A1499F0007E5D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4669AB824A1499F0007E5D3 /* Constants.swift */; };
 		D49DC0EA2496A7010039316E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC0E92496A7010039316E /* AppDelegate.swift */; };
 		D49DC0EC2496A7010039316E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49DC0EB2496A7010039316E /* SceneDelegate.swift */; };
 		D49DC0F12496A7010039316E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D49DC0EF2496A7010039316E /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		5CBE548C68A2B4B6E2603CBE /* Pods_chatty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856B12EEB18E5F0C680CA829 /* Pods-chatty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatty.debug.xcconfig"; path = "Target Support Files/Pods-chatty/Pods-chatty.debug.xcconfig"; sourceTree = "<group>"; };
 		D4669AB624A104BA0007E5D3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D4669AB824A1499F0007E5D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D49DC0E62496A7010039316E /* chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49DC0E92496A7010039316E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49DC0EB2496A7010039316E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				D49DC0E92496A7010039316E /* AppDelegate.swift */,
 				D49DC0EB2496A7010039316E /* SceneDelegate.swift */,
+				D4669AB824A1499F0007E5D3 /* Constants.swift */,
 				D49DC1092496B7720039316E /* Extensions */,
 				D49DC0FD2496A70F0039316E /* View */,
 				D49DC0FE2496A7160039316E /* Controller */,
@@ -257,6 +260,7 @@
 				D49DC0EC2496A7010039316E /* SceneDelegate.swift in Sources */,
 				D49DC1062496B51E0039316E /* UIView+addShadow.swift in Sources */,
 				D49DC1022496B46E0039316E /* LogViewController.swift in Sources */,
+				D4669AB924A1499F0007E5D3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

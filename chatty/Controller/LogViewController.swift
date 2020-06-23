@@ -45,7 +45,7 @@ class LogViewController: UIViewController {
         if isLoginType {
             logIn(email: email, password: password)
         } else {
-            guard let repeatedPassword = repeatPasswordTextField.text Zelse {
+            guard let repeatedPassword = repeatPasswordTextField.text else {
                 // Handle the error
                 print("Password verification is missing.")
                 return
@@ -108,6 +108,6 @@ class LogViewController: UIViewController {
     }
     
     private func navigateToChatVC() {
-        self.performSegue(withIdentifier: "ChatSegue", sender: self)
+        self.performSegue(withIdentifier: K.chatSegue, sender: self)
     }
 }

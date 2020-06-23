@@ -38,14 +38,14 @@ class WelcomeViewController: UIViewController {
     private func setUpButtonsUI() {
         logButtons.forEach { button in
             button.roundCorners()
-            button.addShadow(color: UIColor(named: "shadowColor")?.cgColor)
+            button.addShadow(color: UIColor(named: K.BrandColors.shadowColor)?.cgColor)
         }
     }
     
     private func animateLogo() {
         logoLabel.text = "🖊"
         
-        for (index, letter) in "chatty".enumerated() {
+        for (index, letter) in K.appName.enumerated() {
             Timer.scheduledTimer(withTimeInterval: 0.2 * Double(index), repeats: false) { (timer) in
                 self.logoLabel.text?.removeLast()
                 self.logoLabel.text?.append("\(letter)🖊")
